@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\keren\\.nuget\\packages\\": {}
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\keren\\source\\repos\\registerModuleRPC\\registerModuleRPC.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\registerModuleRPC\\registerModuleRPC.csproj",
       "projectName": "registerModuleRPC",
-      "projectPath": "C:\\Users\\keren\\source\\repos\\registerModuleRPC\\registerModuleRPC.csproj",
-      "packagesPath": "C:\\Users\\keren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\keren\\source\\repos\\registerModuleRPC\\obj\\",
+      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\registerModuleRPC\\registerModuleRPC.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USUARIO\\source\\repos\\registerModuleRPC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\keren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
