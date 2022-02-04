@@ -1,7 +1,13 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using registerModuleRPC.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<registerModuleRPCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("registerModuleRPCContext")));
 
 var app = builder.Build();
 
