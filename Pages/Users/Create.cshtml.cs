@@ -13,9 +13,9 @@ namespace registerModuleRPC.Pages.Users
 {
     public class CreateModel : PageModel
     {
-        private readonly registerModuleRPC.Data.registerModuleRPCContext _context;
+        private readonly registerModuleRPC.Data.registerModuleRPCContext2 _context;
 
-        public CreateModel(registerModuleRPC.Data.registerModuleRPCContext context)
+        public CreateModel(registerModuleRPC.Data.registerModuleRPCContext2 context)
         {
             _context = context;
         }

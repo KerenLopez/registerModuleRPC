@@ -13,9 +13,9 @@ namespace registerModuleRPC.Pages.Users
 {
     public class IndexModel : PageModel
     {
-        private readonly registerModuleRPC.Data.registerModuleRPCContext _context;
+        private readonly registerModuleRPC.Data.registerModuleRPCContext2 _context;
 
-        public IndexModel(registerModuleRPC.Data.registerModuleRPCContext context)
+        public IndexModel(registerModuleRPC.Data.registerModuleRPCContext2 context)
         {
             _context = context;
         }
