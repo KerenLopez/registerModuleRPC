@@ -6,13 +6,13 @@ namespace registerModuleRPC.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly registerModuleRPC.Data.registerModuleRPCContext _context;
+        private readonly registerModuleRPC.Data.registerModuleRPCContext2 _context;
 
         public string Username { get; set; }
        
         public string Password { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger, registerModuleRPC.Data.registerModuleRPCContext context)
+        public IndexModel(ILogger<IndexModel> logger, registerModuleRPC.Data.registerModuleRPCContext2 context)
         {
             _logger = logger;
             _context = context;

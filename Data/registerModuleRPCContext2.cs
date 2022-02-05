@@ -8,9 +8,9 @@ using registerModuleRPC.model;
 
 namespace registerModuleRPC.Data
 {
-    public class registerModuleRPCContext : DbContext
+    public class registerModuleRPCContext2 : DbContext
     {
-        public registerModuleRPCContext (DbContextOptions<registerModuleRPCContext> options)
+        public registerModuleRPCContext2 (DbContextOptions<registerModuleRPCContext2> options)
             : base(options)
         {
         }

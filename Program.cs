@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<registerModuleRPCContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("registerModuleRPCContext")));
+builder.Services.AddDbContext<registerModuleRPCContext2>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("registerModuleRPCContext2")));
+
 
 var app = builder.Build();
 
