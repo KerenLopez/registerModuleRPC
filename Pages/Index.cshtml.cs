@@ -16,5 +16,13 @@ namespace registerModuleRPC.Pages
         {
 
         }
+
+        public void BtSignIn()
+        {
+            if (true)
+            {
+              
+            }
+        }
     }
 }
