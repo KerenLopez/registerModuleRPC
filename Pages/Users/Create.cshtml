@@ -5,13 +5,13 @@
     ViewData["Title"] = "Create";
 }
 <div>
-    <img src="https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" height=200 width=300><br>
-    <h1>RPC::Red de Programación competitiva</h1> <br> <br>
+    <img src="https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" height=200 width=300 style="margin-top:5%; align-content:center"><br>
+    <h1 style="text-align:center">RPC::Red de Programación competitiva</h1> <br> 
 </div>
 <h4>Sign Up</h4>
 <hr />
 <div>
-        <form>
+        <form method="post" asp-page="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="User.UserName" class="control-label">User name: </label>
@@ -24,8 +24,9 @@
                 <span asp-validation-for="User.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label class="control-label">Confirm Password:</label>
-                <input type="password" class="form-control" />
+                <label asp-for="User.ConfirmPwd" class="control-label">Confirm Password:</label>
+                <input asp-for="User.ConfirmPwd" type="password" class="form-control" />
+                <span asp-validation-for="User.ConfirmPwd" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="User.FirstName" class="control-label">First name:</label>
@@ -44,7 +45,7 @@
             </div>
             <div>
                 <br> <input type="submit" value="Save" class="btn-primary"/>
-                <input asp-page="Index" type="button" value="cancel" class="btn-primary"/><br><br>
+                <a href="\..\Index"><input type="button" value="Cancel" class="btn-primary"></a><br><br>
             </div>
         </form>
 </div>

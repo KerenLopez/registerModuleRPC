@@ -41,5 +41,6 @@ namespace registerModuleRPC.Pages.Users
 
             return RedirectToPage("./Index");
         }
+
     }
 }
