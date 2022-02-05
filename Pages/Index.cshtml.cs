@@ -17,12 +17,15 @@ namespace registerModuleRPC.Pages
 
         }
 
-        public void BtSignIn()
+        public void OnPostSignIn()
         {
-            if (true)
-            {
-              
-            }
+
+            Response.Redirect("/Users/Index");
         }
+
     }
+        
+
+
+        
 }
