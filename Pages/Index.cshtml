@@ -8,20 +8,21 @@
   
     <img src = "https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" style="height:200px;margin-top:7%"/><br>
     <h1>RPC::Red de Programación competitiva</h1><br>
-    <h4>Sing in</h4>
+    <h4>Sign in</h4>
     <hr>
     <label for="username">UserName:</label>
     <br>
-
-    <input type="text" asp-for="Username" name="username" >
-    <br>
-     <label for="password">Password:</label>
-     <br>
-    <input type="password" asp-for="Password" name="password">
-    <br>
-
+    <form method="post" >
+        <input type="text" asp-for="UserRPC.UserName" name="username"/>
+        <br>
+         
+         <label for="password">Password:</label>
+         <br>
+        <input type="password" asp-for="UserRPC.Password" name="password"/>
+        <br>
+    </form>
     <form method="post" asp-page="Index">
-        <input type="submit" class="btn-primary" value="SIGN IN" asp-page-handler="SignIn"/>
+        <input type="submit" class="btn-primary" value="SIGN IN"/>
     </form>
     <hr>
      <label>New User:</label>
