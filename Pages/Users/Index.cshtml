@@ -1,4 +1,6 @@
 ﻿@page
+@using Microsoft.AspNetCore.Identity
+@using registerModuleRPC.model
 @model registerModuleRPC.Pages.Users.IndexModel
 
 @{
@@ -7,7 +9,6 @@
 
 <div>
     <img src="https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" height=200 width=300 style="margin-top:5%; align-content:center">
-    <label value="User.UserName"> </label>
     <img src="https://thumbs.dreamstime.com/b/icono-del-usuario-silueta-blanca-en-fondo-cuadrado-azul-114279931.jpg" height=100 width=100 style="margin-left:1025px"><br>
     <a asp-page="\..\Index" style="margin-left:1050px">Logout</a>
     <h1 style="text-align:center">RPC::Red de Programación competitiva</h1> <br> 
