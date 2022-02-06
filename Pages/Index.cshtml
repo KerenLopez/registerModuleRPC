@@ -8,6 +8,9 @@
 	<img src = "https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" style="height:200px;margin-top:7%"/><br>
     <h1>RPC::Red de Programación competitiva</h1><br>
     <h4>Sign in</h4>
+	 @if (!Model.UserFounded) {
+        <h6 class="text-danger">Wrong userName or password</h6>
+    }
     <hr>
 	<form method="post">
 		<div class="text-danger" asp-validation-summary="ModelOnly"></div>

@@ -8,7 +8,7 @@ namespace registerModuleRPC.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly registerModuleRPC.Data.registerModuleRPCContext2 _context;
-
+        public Boolean UserFounded;
        
         [BindProperty]
         public User UserRPC { get; set; }
@@ -17,6 +17,7 @@ namespace registerModuleRPC.Pages
         {
             _logger = logger;
             _context = context;
+            UserFounded = true;
         }
 
         public void OnGet()
@@ -27,15 +28,18 @@ namespace registerModuleRPC.Pages
         
         public void OnPost()
         {
-
+            
             var dbUser = _context.User.FirstOrDefault(u => u.UserName == UserRPC.UserName && u.Password == UserRPC.Password);
             if (dbUser == null)
             {
+                UserFounded = false;
                 Page();
+                
 
             }
             else
             {
+                UserFounded = true;
                 Response.Redirect("/Users/Index");
 
             }
