@@ -12,6 +12,7 @@
     <hr>
     <label for="username">UserName:</label>
     <br>
+
     <form method="post" >
         <input type="text" asp-for="UserRPC.UserName" name="username"/>
         <br>
@@ -21,11 +22,12 @@
         <input type="password" asp-for="UserRPC.Password" name="password"/>
         <br>
     </form>
+
     <form method="post" asp-page="Index">
         <input type="submit" class="btn-primary" value="SIGN IN"/>
     </form>
     <hr>
-     <label>New User:</label>
+     <label>New User:</label><br>
      <br>
 
     <form method="get" action="/Users/Create">
