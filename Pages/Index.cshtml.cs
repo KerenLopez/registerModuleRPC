@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using registerModuleRPC.model;
 
 namespace registerModuleRPC.Pages
 {
@@ -8,9 +9,13 @@ namespace registerModuleRPC.Pages
         private readonly ILogger<IndexModel> _logger;
         private readonly registerModuleRPC.Data.registerModuleRPCContext2 _context;
 
-        public string Username { get; set; }
-       
-        public string Password { get; set; }
+        //  [BindProperty]
+        //  public string Username { get; set; }
+
+        //[BindProperty]
+        // public string Password { get; set; }
+        [BindProperty]
+        public User UserRPC { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger, registerModuleRPC.Data.registerModuleRPCContext2 context)
         {
@@ -23,27 +28,57 @@ namespace registerModuleRPC.Pages
 
         }
 
-        public void OnPostSignIn()
+        
+        public void OnPost()
         {
-            //string un = Request.Form["username"];
+            //Username= Request.Form["username"];
+         
+           /*
+            if (Username==null)
+            {
+                return Redirect("/Users/Create");
+            }
+            else
+            {
 
-            
-                foreach (var u in _context.User)
+
+                var dbUser = _context.User.FirstOrDefault(u => u.UserName == Username);
+                if (dbUser == null)
                 {
-                    if (u.UserName == Username && u.Password == Password)
-                    {
-                        Response.Redirect("/Users/Index");
-                    }
+                    return Page();
+
+                }
+                else
+                {
+                    return Redirect("/Users/Index");
+
                 }
 
-            
-            
-           
+            }
+           */
+            /*
+            List<model.User> users = _context.User.ToList();
+            Boolean exit = false;
+          
+
+            for (int i = 0; i < users.Count() && !exit; i++)
+            {
+                if (users.ElementAt(i).UserName.Equals(Username) && users.ElementAt(i).Password.Equals(Password))
+                {
+                    exit = true;
+                    Response.Redirect("/Users/Index");
+
+                }
+            }
+            */
         }
+           
+
 
     }
-        
 
-
-        
 }
+        
+
+
+        
