@@ -4,35 +4,50 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-  
-    <img src = "https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" style="height:200px;margin-top:7%"/><br>
+<div class="container border text-center">
+	<img src = "https://redprogramacioncompetitiva.com/images/lgo_rpc1.png" style="height:200px;margin-top:7%"/><br>
     <h1>RPC::Red de Programación competitiva</h1><br>
     <h4>Sign in</h4>
     <hr>
-    <label for="username">UserName:</label>
-    <br>
+	<form method="post">
+		<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+		<div class="form-group row">
+			<div class="col-3">
+				<label asp-for="UserRPC.UserName"></label>
+			</div>
 
-    <form method="post" >
-        <input type="text" asp-for="UserRPC.UserName" name="username"/>
-        <br>
-         
-         <label for="password">Password:</label>
-         <br>
-        <input type="password" asp-for="UserRPC.Password" name="password"/>
-        <br>
-    </form>
+			<div class="col-5">
+				<input type="text" asp-for="UserRPC.UserName" class="form-control"/>
 
-    <form method="post" asp-page="Index">
-        <input type="submit" class="btn-primary" value="SIGN IN"/>
-    </form>
-    <hr>
+			</div>
+			<span class="text-danger" asp-validation-for="UserRPC.UserName"></span>
+		</div>
+		<hr />
+		<div class="form-group row">
+			<div class="col-3">
+				<label asp-for="UserRPC.Password"></label>
+			</div>
+
+			<div class="col-5">
+				<input type="password" asp-for="UserRPC.Password" class="form-control"/>
+
+			</div>
+			<span class="text-danger" asp-validation-for="UserRPC.Password"></span>
+		</div>
+
+		<div class="form-group row">
+			<div class="col-3">
+				<input type="submit" class="btn btn-primary" value="SIGN IN" />
+			</div>
+		</div>
+	</form>
+
+	<hr>
      <label>New User:</label><br>
-     <br>
 
     <form method="get" action="/Users/Create">
         <button type="submit" class="btn-primary">SIGN UP</button><br>
     </form>
 
- 
+
 </div>
