@@ -13,18 +13,18 @@
     <label for="username">UserName:</label>
     <br>
 
-    <input type="text" asp-for="Username" name="username" >
+    <input type="text" asp-for="Username" name="username" ><br>
     <br>
      <label for="password">Password:</label>
      <br>
-    <input type="password" asp-for="Password" name="password">
+    <input type="password" asp-for="Password" name="password"><br> 
     <br>
 
     <form method="post" asp-page="Index">
         <input type="submit" class="btn-primary" value="SIGN IN" asp-page-handler="SignIn"/>
     </form>
     <hr>
-     <label>New User:</label>
+     <label>New User:</label><br>
      <br>
 
     <form method="get" action="/Users/Create">
