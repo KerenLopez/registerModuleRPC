@@ -9,12 +9,27 @@
     <h1>RPC::Red de Programación competitiva</h1><br>
     <h4>Sign in</h4>
     <hr>
+<<<<<<< HEAD
 	<form method="post">
 		<div class="text-danger" asp-validation-summary="ModelOnly"></div>
 		<div class="form-group row">
 			<div class="col-3">
 				<label asp-for="UserRPC.UserName"></label>
 			</div>
+=======
+    <label for="username">UserName:</label>
+    <br>
+
+    <form method="post" >
+        <input type="text" asp-for="UserRPC.UserName" name="username"/>
+        <br>
+         
+         <label for="password">Password:</label>
+         <br>
+        <input type="password" asp-for="UserRPC.Password" name="password"/><br>
+        <br>
+    </form>
+>>>>>>> 68c293049d098d7f5114b911111da2d28b3c1df2
 
 			<div class="col-5">
 				<input type="text" asp-for="UserRPC.UserName" class="form-control"/>
